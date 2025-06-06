@@ -941,4 +941,31 @@
     height: auto;
     display: block;
 }
+.cert-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #24292e;
+    color: #fff;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.github-btn:hover {
+    background: #2c3238;
+}
+.cert-description {
+    color: #666;
+    margin: 0.5rem 0 1rem;
+    font-size: 0.95rem;
+}
 
