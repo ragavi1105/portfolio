@@ -16,7 +16,7 @@
     --main-color: #7cf03d;
     --white-color: #fff;
     --disabled-color: #fff3;
-
+    --text-color: #fff;
  }
  html {
     font-size: 62.5%;
@@ -718,4 +718,165 @@
   margin-top: 2rem;
   cursor: pointer;
  }
+.certifications {
+    min-height: 100vh;
+    padding: 8rem 9%;
+}
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 3rem 0;
+}
+
+.cert-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    transition: .5s ease;
+}
+
+.cert-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.cert-box:hover img {
+    transform: scale(1.1);
+}
+
+.cert-overlay {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    transition: .5s ease;
+}
+
+.cert-box:hover .cert-overlay {
+    bottom: 0;
+}
+
+.cert-overlay h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.cert-overlay p {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    text-align: center;
+}
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.cert-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.cert-item {
+    flex: 0 1 400px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.cert-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.cert-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 1rem;
+}
+
+.cert-details {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.cert-details h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-details p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.cert-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2rem;
+    scroll-behavior: smooth;
+}
+
+.cert-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cert-scroll::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.cert-scroll::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 4px;
+}
+
+.cert-item {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.cert-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cert-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
